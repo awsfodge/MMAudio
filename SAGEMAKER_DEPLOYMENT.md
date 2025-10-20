@@ -32,6 +32,10 @@ The deployment solution consists of:
 
 ### IAM Role Setup
 
+Use the managed policy: `arn:aws:iam::aws:policy/AmazonSageMakerFullAccess`
+
+OR
+
 Your SageMaker execution role needs these permissions:
 
 ```json
@@ -73,9 +77,6 @@ Your SageMaker execution role needs these permissions:
   ]
 }
 ```
-
-Or use the managed policy: `arn:aws:iam::aws:policy/AmazonSageMakerFullAccess`
-
 ## Quick Start
 
 ### 1. Local Testing (Recommended First Step)
