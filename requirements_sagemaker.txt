@@ -1,0 +1,33 @@
+# SageMaker deployment requirements for MMAudio
+# Pin versions for reproducible deployment
+
+# Core dependencies
+torch>=2.5.1
+torchvision
+torchaudio
+
+# NOTE: SageMaker SDK is NOT needed inside the inference container
+# It's only needed client-side for deployment. Removing it saves 3-5 minutes of cold start time.
+
+# MMAudio core dependencies
+huggingface_hub>=0.26
+cython
+gitpython>=3.1
+numpy>=1.21,<2.1
+Pillow>=9.5
+opencv-python>=4.8
+scipy>=1.7
+tqdm>=4.66.1
+einops>=0.6
+requests
+torchdiffeq>=0.2.5
+librosa>=0.8.1
+colorlog
+open_clip_torch>=2.29.0
+av>=14.0.1
+timm>=1.0.12
+
+# Not needed for inference but included for compatibility
+tensorboard>=2.11
+tensordict>=0.6.1
+python-dotenv
